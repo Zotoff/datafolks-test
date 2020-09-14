@@ -1,0 +1,10 @@
+const gulp = require('gulp')
+const pug2html = require('./gulp/tasks/pug')
+const styles = require('./gulp/tasks/styles')
+const scripts = require('./gulp/tasks/scripts')
+const serve = require('./gulp/tasks/serve')
+
+module.exports.pug = gulp.series(pug2html)
+module.exports.style = gulp.series(styles)
+module.exports.scripts = gulp.series(scripts)
+module.exports.serve = gulp.series(serve)

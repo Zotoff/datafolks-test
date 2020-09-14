@@ -1,0 +1,427 @@
+.datafolks {
+    &__main {
+        padding-top: 70px;
+        h1 {
+            font-family: "DINPro-Regular", sans-serif;
+            text-transform: uppercase;
+            color: $text-blue;
+            text-align: center;
+            margin-bottom: 67px;
+        }
+        p {
+            font-family: "DINPro-Regular", sans-serif;
+            font-size: 18px;
+            color: $text-darkblue;
+            line-height: 1.2em;
+            margin-bottom: 30px;
+        }
+    }
+    &__projects {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        flex-wrap: wrap;
+        width: 100%;
+        &__slider {
+            width: 1655px;
+            max-width: 1655px;
+            height: auto;
+            margin-left: 65px;
+            margin-top: 140px;
+
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+
+            @media all and (min-width: 1810px) {
+                width: 90%;
+                max-width: 1655px;
+                margin: 0px auto;
+                margin-top: 140px;
+            }
+
+            @media all and (max-width: 1600px) {
+                max-width: 90%;
+                width: 90%;
+                margin: 0px auto;
+                margin-top: 140px;
+            }
+
+            @include media-breakpoint-down(lg) {
+                max-width: 90%;
+                width: 90%;
+                margin: 0px auto;
+                margin-top: 140px;
+            }
+            &__item {
+                width: 33.33%;
+                height: 550px;
+                position: relative;
+                @media all and (max-width: 1635px) {
+                    max-height: 500px;
+                }
+                @media all and (max-width: 1400px) {
+                    max-height: 450px;
+                }
+                @media all and (max-width: 1260px) {
+                    max-height: 450px;
+                }
+                @include media-breakpoint-down(lg) {
+                    width: 70%;
+                    max-height: 400px;
+                    margin-bottom: 2rem;
+                    margin-left: auto;
+                    margin-right: auto;
+                }
+                @include media-breakpoint-down(sm) {
+                    width: 100%;
+                }
+                & a {
+                    display: flex;
+                    align-items: flex-end;
+                    justify-content: center;
+                    flex-wrap: wrap;
+                    width: 100%;
+                    height: 100%;
+                    overflow: hidden;
+                    position: relative;
+                    text-decoration: none;
+                    &:hover {
+                        cursor: pointer;
+                        text-decoration: none;
+                    }
+                    & img {
+                        width: 100%;
+                        height: 100%;
+                        object-fit: cover;
+                        position: absolute;
+                        top: 0px;
+                        left: 0px;
+                        z-index: 90;
+                    }
+                    & h3 {
+                        font-family: "DINPro-Bold", sans-serif;
+                        font-size: 24px;
+                        text-transform: uppercase;
+                        color: #ffffff;
+                        text-align: center;
+                        z-index: 95;
+                        margin-bottom: 45px;
+                    }
+                }
+                &::before {
+                    content: "";
+                    width: 100%;
+                    height: 100%;
+                    position: absolute;
+                    top: 0px;
+                    left: 0px;
+                    z-index: 94;
+                    background: linear-gradient(0deg,rgba(96,108,123,.6) -15%,rgba(255,255,255,.1) 44%)
+                }
+            }
+        }
+        &__loadmore {
+            width: 100%;
+            height: auto;
+            margin-top: 65px;
+            margin-bottom: 105px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            & button {
+                width: 360px;
+                height: 60px;
+                background: transparent;
+                border: 3px solid #00264c;
+
+                font-family: "DINPro-Bold", sans-serif;
+                font-size: 18px;
+                line-height: 1.2em;
+                text-transform: uppercase;
+                color: #344258;
+                transition: all .2s ease-in;
+                &:hover {
+                    background-color:  #00264c;
+                    color: #ffffff;
+                }
+                @include media-breakpoint-down(sm) {
+                    width: 90%;
+                }
+            }
+        }
+    }
+    &__footer {
+        width: 100%;
+        height: auto;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+        background-color: $bg-darkblue;
+        padding-bottom: 97px;
+        padding-top: 32px;
+        &__container {
+            width: 1220px;
+            max-width: 1220px;
+            height: auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            @media all and (max-width: 1280px) {
+                width: 90%;
+                margin-left: auto;
+                margin-right: auto;
+            }
+        }
+        @media all and (min-width: 1800px) {
+            padding-left: 355px;
+            padding-right: 240px;
+        }
+        @include media-breakpoint-down(lg) {
+            padding-left: initial;
+            padding-right: initial;
+        }
+        &__left,
+        &__right {
+            width: 48%;
+            height: auto;
+            @include media-breakpoint-down(md) {
+                width: 100%;
+                height: auto;
+                margin-bottom: 2rem;
+            }
+        }
+        &__left {
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            flex-wrap: wrap;
+            & h2,
+            & p {
+                width: 100%;
+            }
+            & h2 {
+                font-family: "DINPro-Bold", sans-serif;
+                font-size: 45px;
+                color: #ffffff;
+                text-transform: uppercase;
+                margin-bottom: 75px;
+            }
+            & p {
+                font-family: "MyriadPro", sans-serif;
+                font-size: 18px;
+                line-height: 1.2em;
+                color: #ffffff;
+                margin-bottom: 30px;
+            }
+            &__contacts {
+                width: 100%;
+                height: auto;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                flex-wrap: wrap;
+                margin-top: 30px;
+                &__item {
+                    width: 47%;
+                    height: 110px;
+                    display: flex;
+                    align-items: flex-start;
+                    justify-content: flex-start;
+                    flex-wrap: wrap;
+                    @media all and (max-width: 1200px) {
+                        width: 100%;
+                        height: auto;
+                        margin-right: auto;
+                        margin-left: auto;
+                        margin-bottom: 30px;
+                    }
+                }
+            }
+        }
+        &__right {
+            display: flex;
+            align-items: flex-start;
+            justify-content: flex-start;
+            flex-wrap: wrap;
+            height: auto;
+            &__form {
+                width: 558px;
+                height: 470px;
+                border: 5px solid $text-grey;
+                padding: 38px;
+                @include media-breakpoint-down(md) {
+                    width: 100%;
+                    height: auto;
+                    padding: 15px;
+                }
+                & form {
+                    width: 100%;
+                    height: 100%;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    flex-wrap: wrap;
+                    @include media-breakpoint-down(md) {
+                        width: 100%;
+                    }
+                    & .form-group {
+                        width: 100%;
+                        height: auto;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        flex-wrap: wrap;
+                        margin-bottom: .2rem;
+                        & input,
+                        & textarea {
+                            background-color: $text-grey;
+                        }
+                        & input {
+                            width: 100%;
+                            height: 55px;
+                            padding-left: 36px;
+                            border: none;
+                            outline: none;
+                            color: #ffffff;
+                            &::placeholder {
+                                font-family: "DINPro-Medium", sans-serif;
+                                font-size: 15px;
+                                color: #ffffff;
+                            }
+                        }
+                        & textarea {
+                            width: 100%;
+                            height: auto;
+                            min-height: 110px;
+                            padding-left: 36px;
+                            padding-top: 24px;
+                            border: none;
+                            outline: none;
+                            color: #ffffff;
+                            &::placeholder {
+                                font-family: "DINPro-Medium", sans-serif;
+                                font-size: 15px;
+                                color: #ffffff;
+                            }
+                        }
+                        & a {
+                            font-family: "DINPro-Medium", sans-serif;
+                            font-size: 14px;
+                            color: #4c89c1;
+                            text-decoration: underline;
+                            cursor: pointer;
+                            text-align: center;
+                            margin: 15px auto;
+                        }
+                    }
+                    & button {
+                        width: 290px;
+                        height: 60px;
+                        border: 3px solid #ffffff;
+                        color: #ffffff;
+                        font-family: "DINPro-Bold", sans-serif;
+                        font-size: 18px;
+                        line-height: 1.2em;
+                        text-transform: uppercase;
+                        background: transparent;
+                    }
+                }
+            }
+        }
+    }
+    &__contacts {
+        &__phone {
+            width: 100%;
+            font-family: "Myriad Pro", sans-serif;
+            font-size: 30px;
+            line-height: 1.2em;
+            color: #ffffff;
+            text-transform: uppercase;
+            text-decoration: none;
+            transition: all .5s ease-in;
+            margin-bottom: 15px;
+            &:hover {
+                text-decoration: none;
+                cursor: pointer;
+            }
+        }
+        &__email {
+            display: flex;
+            align-items: flex-start;
+            justify-content: flex-start;
+            flex-wrap: wrap;
+            border-left: 3px solid #0058a7;
+            padding-left: 36px;
+            padding-top: 20px;
+            padding-bottom: 10px;
+            @include media-breakpoint-down(md) {
+                width: 100%;
+                padding-left: 0;
+                padding-right: 0;
+                border-left: none;
+            }
+            & p,
+            & a {
+                font-family: "Myriad Pro", sans-serif;
+                font-size: 18px;
+                line-height: 1.2em;
+                color: #3d95e3;
+                width: 100%;
+            }
+            & p {
+                margin-bottom: 0;
+            }
+            & a {
+                text-decoration: none;
+                cursor: pointer;
+                transition: all .5s ease-in;
+                width: 100%;
+                &:hover {
+                    cursor: pointer;
+                    text-decoration: none;
+                }
+            }
+        }
+    }
+    &__modal {
+        position: fixed;
+        top: 0px;
+        left: 0px;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        z-index: 100;
+        background-color: rgba(0, 0, 0, .8);
+        &__container {
+            width: 450px;
+            height: auto;
+            background: #ffffff;
+            border-radius: 10px;
+            padding: 15px;
+            @include media-breakpoint-down(sm) {
+                width: 90%;
+                height: auto;
+            }
+            & h2 {
+                font-family: "DINPro-Bold", sans-serif;
+                font-size: 28px;
+                margin-bottom: 15px;
+            }
+            & p {
+                font-family: "DINPro-Regular", sans-serif;
+                font-size: 18px;
+                margin-bottom: 15px;
+            }
+        }
+    }
+}
+
+.d--none {
+    display: none;
+}
