@@ -1,3 +1,23 @@
+html {
+  font-size: 16px;
+}
+
+@media screen and (min-width: 320px) {
+  html {
+    font-size: calc(16px + 6 * ((100vw - 320px) / 680));
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  html {
+    font-size: 22px;
+  }
+}
+
+img {
+    max-width: 100%;
+}
+
 .datafolks {
     &__main {
         padding-top: 70px;
@@ -10,7 +30,7 @@
         }
         p {
             font-family: "DINPro-Regular", sans-serif;
-            font-size: 18px;
+            font-size: 0.8182rem;
             color: $text-darkblue;
             line-height: 1.2em;
             margin-bottom: 30px;
@@ -52,7 +72,7 @@
                 max-width: 90%;
                 width: 90%;
                 margin: 0px auto;
-                margin-top: 140px;
+                margin-top: 67px;
             }
             &__item {
                 width: 33.33%;
@@ -71,6 +91,7 @@
                     width: 70%;
                     max-height: 400px;
                     margin-bottom: 2rem;
+                    margin-top: 0px;
                     margin-left: auto;
                     margin-right: auto;
                 }
@@ -137,7 +158,7 @@
                 border: 3px solid #00264c;
 
                 font-family: "DINPro-Bold", sans-serif;
-                font-size: 18px;
+                font-size: 0.8182rem;
                 line-height: 1.2em;
                 text-transform: uppercase;
                 color: #344258;
@@ -186,7 +207,6 @@
         }
         &__left,
         &__right {
-            width: 48%;
             height: auto;
             @include media-breakpoint-down(md) {
                 width: 100%;
@@ -195,10 +215,14 @@
             }
         }
         &__left {
+            width: 59%;
             display: flex;
             align-items: center;
             justify-content: flex-start;
             flex-wrap: wrap;
+            @include media-breakpoint-down(md) {
+                width: 100%;
+            }
             & h2,
             & p {
                 width: 100%;
@@ -212,7 +236,7 @@
             }
             & p {
                 font-family: "MyriadPro", sans-serif;
-                font-size: 18px;
+                font-size: 0.8182rem;
                 line-height: 1.2em;
                 color: #ffffff;
                 margin-bottom: 30px;
@@ -227,7 +251,7 @@
                 margin-top: 30px;
                 &__item {
                     width: 47%;
-                    height: 110px;
+                    height: auto;
                     display: flex;
                     align-items: flex-start;
                     justify-content: flex-start;
@@ -243,17 +267,21 @@
             }
         }
         &__right {
+            width: 40%;
             display: flex;
             align-items: flex-start;
             justify-content: flex-start;
             flex-wrap: wrap;
             height: auto;
+            @include media-breakpoint-down(md) {
+                width: 100%;
+            }
             &__form {
                 width: 558px;
                 height: 470px;
                 border: 5px solid $text-grey;
                 padding: 38px;
-                @include media-breakpoint-down(md) {
+                @include media-breakpoint-down(lg) {
                     width: 100%;
                     height: auto;
                     padding: 15px;
@@ -318,13 +346,13 @@
                             margin: 15px auto;
                         }
                     }
-                    & button {
+                    & input[type="submit"] {
                         width: 290px;
                         height: 60px;
                         border: 3px solid #ffffff;
                         color: #ffffff;
                         font-family: "DINPro-Bold", sans-serif;
-                        font-size: 18px;
+                        font-size: 0.8182rem;
                         line-height: 1.2em;
                         text-transform: uppercase;
                         background: transparent;
@@ -337,13 +365,16 @@
         &__phone {
             width: 100%;
             font-family: "Myriad Pro", sans-serif;
-            font-size: 30px;
+            font-size: 1.4rem;
             line-height: 1.2em;
             color: #ffffff;
             text-transform: uppercase;
             text-decoration: none;
             transition: all .5s ease-in;
             margin-bottom: 15px;
+            @include media-breakpoint-down(lg) {
+                font-size: 1.3rem;
+            }
             &:hover {
                 text-decoration: none;
                 cursor: pointer;
@@ -367,7 +398,7 @@
             & p,
             & a {
                 font-family: "Myriad Pro", sans-serif;
-                font-size: 18px;
+                font-size: 0.8182rem;
                 line-height: 1.2em;
                 color: #3d95e3;
                 width: 100%;
@@ -380,6 +411,9 @@
                 cursor: pointer;
                 transition: all .5s ease-in;
                 width: 100%;
+                @include media-breakpoint-down(sm) {
+                   margin: .8rem 0px !important;
+                }
                 &:hover {
                     cursor: pointer;
                     text-decoration: none;
@@ -415,7 +449,7 @@
             }
             & p {
                 font-family: "DINPro-Regular", sans-serif;
-                font-size: 18px;
+                font-size: 0.8182rem;
                 margin-bottom: 15px;
             }
         }

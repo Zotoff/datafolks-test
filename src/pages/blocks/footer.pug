@@ -16,18 +16,18 @@ footer.datafolks__footer
                         a(href="https://facebook.com/exampleagency") Facebook.com/exampleagency
         .datafolks__footer__right
             .datafolks__footer__right__form
-                form(method="" action="")
+                form(method="POST" action="form.php")
                     .form-group
-                        input(type="text", placeholder="Полное имя", required, minlength="3")
+                        input(type="text", placeholder="Полное имя", required, minlength="3", value="")
                     .form-group
-                        input(type="email", placeholder="E-mail", required, pattern="[a-zA-Z0-9!#$%&'*+\/=?^_`{|}~.-]+@[a-zA-Z0-9-]+(\.[a-zA-Z0-9-]+)*")
+                        input(type="email", placeholder="E-mail", required, pattern="[a-zA-Z0-9!#$%&'*+\/=?^_`{|}~.-]+@[a-zA-Z0-9-]+(\.[a-zA-Z0-9-]+)*", value="")
                     .form-group
-                        input(type="tel", placeholder="Телефон", required)
+                        input(type="tel", placeholder="Телефон", required, value="")
                     .form-group
                         textarea(placeholder="Пожалуйста, опишите задачу")
                     .form-group
                         a(href="/policy") Политика обработки персональных данных
-                    button(type="submit") Отправить заявку
+                    input(type="submit" value="Отправить заявку")
 .datafolks__modal.d--none
     .datafolks__modal__container
         h2
